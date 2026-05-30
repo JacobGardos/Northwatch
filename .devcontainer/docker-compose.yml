@@ -1,0 +1,20 @@
+services:
+  development:
+    init: true
+    container_name: northwatch-devcontainer
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - northwatch-bashhistory:/commandhistory
+    command: sleep infinity
+    networks:
+      - dev_network
+
+volumes:
+  northwatch-bashhistory:
+
+networks:
+  dev_network:
+    name: dev_network
+    driver: bridge

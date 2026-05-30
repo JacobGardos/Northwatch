@@ -1,0 +1,7 @@
+{
+    "js/ts.preferences.importModuleSpecifier": "project-relative",
+    "js/ts.tsdk.path": "node_modules/typescript/lib",
+    "js/ts.tsserver.maxMemory": 8192,
+    "material-icon-theme.activeIconPack": "nest",
+    "references.preferredLocation": "view",
+}

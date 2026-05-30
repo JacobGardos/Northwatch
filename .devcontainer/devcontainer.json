@@ -1,0 +1,58 @@
+{
+    "name": "northwatch-devcontainer",
+    "service": "development",
+    "workspaceFolder": "/workspaces/northwatch",
+    "remoteUser": "node",
+    "dockerComposeFile": [
+        "./docker-compose.yml"
+    ],
+    "features": {
+        "ghcr.io/devcontainers/features/docker-outside-of-docker": {
+            "installDockerBuildx": true,
+            "installDockerComposeSwitch": true,
+            "moby": false,
+            "version": "latest"
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "esbenp.prettier-vscode",
+                "streetsidesoftware.code-spell-checker",
+                "dbaeumer.vscode-eslint",
+                "johnsoncodehk.vscode-tsconfig-helper",
+                "stringham.copy-with-imports",
+            ],
+            "settings": {
+                "editor.codeActionsOnSave": {
+                    "source.fixAll.eslint": "explicit",
+                    "source.organizeImports": "explicit"
+                },
+                "editor.defaultFormatter": "esbenp.prettier-vscode",
+                "editor.formatOnSave": true,
+                "editor.quickSuggestions": {
+                    "strings": true
+                },
+                "eslint.rules.customizations": [
+                    {
+                        "rule": "arrow-body-style",
+                        "severity": "off"
+                    }
+                ],
+                "eslint.validate": [
+                    "javascript",
+                    "javascriptreact",
+                    "typescript",
+                    "typescriptreact",
+                    "vue",
+                    "json"
+                ],
+                "js/ts.tsdk.path": "node_modules/typescript/lib",
+                "remote.localPortHost": "allInterfaces",
+                "terminal.integrated.defaultProfile.linux": "zsh",
+                "terminal.integrated.shell.linux": "zsh",
+                "vue.server.hybridMode": "typeScriptPluginOnly"
+            }
+        }
+    }
+}
